@@ -31,10 +31,12 @@ table 50100 MyTable
 
     trigger OnModify();
     begin
+        Message('MyTable - OnModify');
     end;
 
     trigger OnDelete();
     begin
+        Message('MyTable - OnDelete');
     end;
 
     trigger OnRename();
