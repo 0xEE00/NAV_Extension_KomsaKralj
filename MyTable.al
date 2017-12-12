@@ -26,6 +26,7 @@ table 50100 MyTable
 
     trigger OnInsert();
     begin
+        Message('MyTable - OnInsert');
     end;
 
     trigger OnModify();
