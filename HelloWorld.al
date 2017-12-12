@@ -24,7 +24,7 @@ pageextension 50100 CustomerListExt extends "Customer List"
     }
     trigger OnOpenPage();
     begin
-        Message('Gde si komšo, gde si kralju!!!');
+        //Message('Gde si komšo, gde si kralju!!!');
     end;
 
 }
