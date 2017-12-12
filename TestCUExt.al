@@ -18,7 +18,7 @@ codeunit 50100 TestCUExt
         MyTable.Init;
         MyTable."Entry No." := EntryNoVar + 1;
         MyTable.Description := Msg;
-        MyTable.Insert;
+        MyTable.Insert(true);
         Message(Format(MyTable."Entry No."));
     end;
 
