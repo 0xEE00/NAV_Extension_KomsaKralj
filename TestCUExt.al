@@ -11,9 +11,9 @@ codeunit 50100 TestCUExt
     begin
         Msg := HelloText.GetRadnomNum;
         Message('%1, %2', Msg, Rec.Name);
-        if MyTable.FindLast then begin
-            EntryNoVar := MyTable."Entry No.";
-        end else
+        if MyTable.FindLast then
+            EntryNoVar := MyTable."Entry No."
+        else
             EntryNoVar := 0;
         MyTable.Init;
         MyTable."Entry No." := EntryNoVar + 1;
