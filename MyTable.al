@@ -26,17 +26,17 @@ table 50100 MyTable
 
     trigger OnInsert();
     begin
-        Message('MyTable - OnInsert');
+        //Message('MyTable - OnInsert');
     end;
 
     trigger OnModify();
     begin
-        Message('MyTable - OnModify');
+        //Message('MyTable - OnModify');
     end;
 
     trigger OnDelete();
     begin
-        Message('MyTable - OnDelete');
+        //Message('MyTable - OnDelete');
     end;
 
     trigger OnRename();

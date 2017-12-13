@@ -14,11 +14,22 @@ pageextension 50100 CustomerListExt extends "Customer List"
         {
             action("TEST")
             {
-                RunObject = codeunit TestCUExt;
-                RunPageOnRec = true;
+                //RunObject = codeunit TestCUExt;
+                //RunPageOnRec = true;
                 Image = CheckDuplicates;
                 PromotedCategory = Category8;
                 Promoted = true;
+                trigger OnAction();
+                begin
+                    //Message('Pre pokretanja CU');
+                    TestCUExt.Run(Rec);
+                    //if MyTable.FindLast then
+                    Clear(CustInfo);
+                    // MyTable.FindLast;
+                    // CustInfo.SetTableView(MyTable);
+                    // CustInfo.Run;
+                    CustInfo.Run;
+                end;
             }
         }
     }
@@ -27,4 +38,8 @@ pageextension 50100 CustomerListExt extends "Customer List"
         //Message('Gde si komšo, gde si kralju!!!');
     end;
 
+    var
+        MyTable: Record MyTable;
+        TestCUExt: Codeunit TestCUExt;
+        CustInfo: Page CustomerInfo;
 }
